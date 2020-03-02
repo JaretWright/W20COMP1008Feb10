@@ -26,6 +26,7 @@ public class HourlyEmployee extends Employee{
         return hoursWorked;
     }
 
+
     public void setHoursWorked(int hoursWorked) {
         if (hoursWorked>=0 && hoursWorked<=80)
             this.hoursWorked = hoursWorked;

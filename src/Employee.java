@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.time.Period;
 
-public abstract class Employee {
+public abstract class Employee implements Payable{
     private String firstName, lastName, sin;
     private LocalDate birthday;
 
@@ -54,5 +54,11 @@ public abstract class Employee {
     public String toString()
     {
         return String.format("%s %s", firstName, lastName);
+    }
+
+    public void payAmount(LocalDate date, double amount, String description)
+    {
+        System.out.printf("System registered a payment of $%.2f on %s",
+                            amount, date);
     }
 }
